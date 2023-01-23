@@ -47,8 +47,18 @@ class ViewController extends Controller
         $data = [
             'records' => Book::all()
         ];
-        
+
         return view('view.list', $data);
     }
 
+    public function foreach_assoc() 
+    { 
+        return view('view.foreach_assoc', [
+            'member' => [
+                'name' => 'YAMADA,Yoshihiro', 
+                'sex' => '男', 
+                'birth' => '1923-11-10' 
+            ]
+        ]);
+    }
 }
