@@ -66,4 +66,14 @@ class ViewController extends Controller
     { 
         return view('view.foreach_loop', ['weeks' => ['月', '火', '水', '木', '金', '土', '日' ] ]); 
     }
+
+    public function forelse() 
+    { 
+        $data = [
+            'records' => Book::all()
+        ];
+
+        return view('view.forelse', $data);
+    }
+
 }

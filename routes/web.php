@@ -28,3 +28,4 @@ Route::get('/view/for', 'ViewController@for');
 Route::get('/view/list', 'ViewController@list');
 Route::get('/view/foreach_assoc', 'ViewController@foreach_assoc');
 Route::get('/view/foreach_loop', 'ViewController@foreach_loop');
+Route::get('/view/forelse', 'ViewController@forelse');
