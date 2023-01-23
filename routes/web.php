@@ -18,4 +18,5 @@ Route::get('/', function () {
 Route::get('/hello', 'HelloController@index');
 Route::get('/hello/view', 'HelloController@view');
 Route::get('/hello/list', 'HelloController@list');
+Route::get('/view/escape', 'ViewController@escape');
 
