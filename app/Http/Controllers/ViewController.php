@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
 
 class ViewController extends Controller
 {
@@ -39,6 +40,15 @@ class ViewController extends Controller
     public function for() 
     { 
         return view('view.for');
+    }
+
+    public function list() 
+    { 
+        $data = [
+            'records' => Book::all()
+        ];
+        
+        return view('view.list', $data);
     }
 
 }

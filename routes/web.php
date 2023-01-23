@@ -25,3 +25,4 @@ Route::get('/view/isset', 'ViewController@isset');
 Route::get('/view/switch', 'ViewController@switch');
 Route::get('/view/while', 'ViewController@while');
 Route::get('/view/for', 'ViewController@for');
+Route::get('/view/list', 'ViewController@list');
