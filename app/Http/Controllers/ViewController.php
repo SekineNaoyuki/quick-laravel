@@ -15,4 +15,10 @@ class ViewController extends Controller
     { 
         return view('view.if', ['random' => random_int(0, 100) ]); 
     }
+
+    public function unless() 
+    { 
+        return view('view.unless', ['random' => random_int(0, 100) ]); 
+    }
+
 }
