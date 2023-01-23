@@ -26,4 +26,9 @@ class ViewController extends Controller
         return view('view.isset', ['msg' => 'こんにちは、世界！']); 
     }
 
+    public function switch() 
+    { 
+        return view('view.switch', ['random' => random_int(1, 5) ]);
+    }
+
 }
