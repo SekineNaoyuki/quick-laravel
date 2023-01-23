@@ -10,4 +10,9 @@ class ViewController extends Controller
     { 
         return view('view.escape', ['msg' => '<img src ="https://wings.msn.to/image/wings.jpg" title="ロゴ" /><p>WINGSへようこそ</p>']); 
     }
+
+    public function if() 
+    { 
+        return view('view.if', ['random' => random_int(0, 100) ]); 
+    }
 }
