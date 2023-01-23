@@ -36,4 +36,9 @@ class ViewController extends Controller
         return view('view.while');
     }
 
+    public function for() 
+    { 
+        return view('view.for');
+    }
+
 }
