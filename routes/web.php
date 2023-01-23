@@ -23,4 +23,4 @@ Route::get('/view/if', 'ViewController@if');
 Route::get('/view/unless', 'ViewController@unless');
 Route::get('/view/isset', 'ViewController@isset');
 Route::get('/view/switch', 'ViewController@switch');
-
+Route::get('/view/while', 'ViewController@while');

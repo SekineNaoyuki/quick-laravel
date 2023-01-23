@@ -31,4 +31,9 @@ class ViewController extends Controller
         return view('view.switch', ['random' => random_int(1, 5) ]);
     }
 
+    public function while() 
+    { 
+        return view('view.while');
+    }
+
 }
