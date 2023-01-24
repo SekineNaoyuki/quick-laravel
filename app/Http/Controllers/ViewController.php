@@ -81,5 +81,9 @@ class ViewController extends Controller
         return view('view.style_class', ['isEnabled' => true]);
     }
 
+    public function checked() 
+    { 
+        return view('view.checked', ['isEnabled' => true]);
+    }
 
 }
