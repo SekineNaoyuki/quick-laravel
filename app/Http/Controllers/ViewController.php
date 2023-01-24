@@ -76,4 +76,10 @@ class ViewController extends Controller
         return view('view.forelse', $data);
     }
 
+    public function style_class() 
+    { 
+        return view('view.style_class', ['isEnabled' => true]);
+    }
+
+
 }
