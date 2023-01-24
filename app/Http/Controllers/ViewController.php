@@ -91,4 +91,13 @@ class ViewController extends Controller
         return view('view.master', ['msg' => 'hello.world']);
     }
 
+    public function comp() 
+    { 
+        $data = [
+            'title' => 'hello'
+        ];
+
+        return view('view.comp', $data);
+    }
+
 }
