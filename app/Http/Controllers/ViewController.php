@@ -94,7 +94,8 @@ class ViewController extends Controller
     public function comp() 
     { 
         $data = [
-            'title' => 'hello'
+            'title' => 'hello',
+            'comp' => 'my-alert'
         ];
 
         return view('view.comp', $data);
