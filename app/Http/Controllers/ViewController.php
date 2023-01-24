@@ -86,4 +86,9 @@ class ViewController extends Controller
         return view('view.checked', ['isEnabled' => true]);
     }
 
+    public function master() 
+    { 
+        return view('view.master', ['msg' => 'hello.world']);
+    }
+
 }
