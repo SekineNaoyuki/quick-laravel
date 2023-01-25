@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\HelloController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +37,19 @@ Route::get('/view/master', 'ViewController@master');
 Route::get('/view/comp', 'ViewController@comp');
 Route::get('/route/param/{id?}', 'RouteController@param')
     ->whereNumber('id');
+Route::get('/route/enum_param/{category}', 'RouteController@enum_param');
+Route::redirect('/hoge', '/', 301);
+Route::resource('/articles', 'ArticleController')
+    ->except(['edit', 'update']);
+
+Route::controller(HelloController::class)->group(function ()
+{
+    Route::get('/hello', 'index');
+    Route::get('/hello/view', 'view');
+    Route::get('/hello/list', 'list');
+});
+
+Route::fallback(function()
+{
+    return view('route.error');
+});
