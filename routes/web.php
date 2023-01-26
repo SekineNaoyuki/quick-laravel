@@ -53,3 +53,6 @@ Route::fallback(function()
 {
     return view('route.error');
 });
+
+Route::get('/ctrl/plain', 'ctrlController@plain');
+Route::get('/ctrl/header', 'ctrlController@header');
