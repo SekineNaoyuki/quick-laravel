@@ -57,3 +57,5 @@ Route::fallback(function()
 Route::get('/ctrl/plain', 'ctrlController@plain');
 Route::get('/ctrl/header', 'ctrlController@header');
 Route::get('/ctrl/outJson', 'ctrlController@outJson');
+Route::get('/ctrl/outFile', 'ctrlController@outFile');
+Route::get('/ctrl/outCsv', 'ctrlController@outCsv');
