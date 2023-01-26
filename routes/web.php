@@ -50,11 +50,6 @@ Route::controller(HelloController::class)->group(function ()
     Route::get('/hello/list', 'list');
 });
 
-Route::fallback(function()
-{
-    return view('route.error');
-});
-
 Route::get('/ctrl/plain', 'ctrlController@plain');
 Route::get('/ctrl/header', 'ctrlController@header');
 Route::get('/ctrl/outJson', 'ctrlController@outJson');
@@ -62,3 +57,12 @@ Route::get('/ctrl/outFile', 'ctrlController@outFile');
 Route::get('/ctrl/outCsv', 'ctrlController@outCsv');
 Route::get('/ctrl/outImage', 'ctrlController@outImage');
 Route::get('/ctrl/redirectBasic', 'ctrlController@redirectBasic');
+Route::get('/ctrl/form', 'ctrlController@form');
+Route::post('/ctrl/result', 'ctrlController@result');
+
+
+
+Route::fallback(function()
+{
+    return view('route.error');
+});

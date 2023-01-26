@@ -68,4 +68,15 @@ class CtrlController extends Controller
         return redirect()->action('RouteController@param', ['id' => 108]);
     }
 
+    public function form()
+    {
+        return view('ctrl.form', ['result' => '']);
+    }
+
+    public function result(Request $req)
+    {
+        $name = $req->name;
+        return view('ctrl.form', ['result' => 'こんにちは'.$name.'さん！']);
+    }
+
 }
