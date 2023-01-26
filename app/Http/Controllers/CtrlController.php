@@ -63,5 +63,9 @@ class CtrlController extends Controller
             ->file('C:/data/wings.png', ['content-type' => 'image/png' ]);
     }
 
+    public function redirectBasic()
+    {
+        return redirect()->action('RouteController@param', ['id' => 108]);
+    }
 
 }

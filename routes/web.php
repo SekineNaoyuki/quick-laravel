@@ -36,7 +36,8 @@ Route::get('/view/checked', 'ViewController@checked');
 Route::get('/view/master', 'ViewController@master');
 Route::get('/view/comp', 'ViewController@comp');
 Route::get('/route/param/{id?}', 'RouteController@param')
-    ->whereNumber('id');
+    ->whereNumber('id')
+    ->name('param');
 Route::get('/route/enum_param/{category}', 'RouteController@enum_param');
 Route::redirect('/hoge', '/', 301);
 Route::resource('/articles', 'ArticleController')
@@ -60,3 +61,4 @@ Route::get('/ctrl/outJson', 'ctrlController@outJson');
 Route::get('/ctrl/outFile', 'ctrlController@outFile');
 Route::get('/ctrl/outCsv', 'ctrlController@outCsv');
 Route::get('/ctrl/outImage', 'ctrlController@outImage');
+Route::get('/ctrl/redirectBasic', 'ctrlController@redirectBasic');
