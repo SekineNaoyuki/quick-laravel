@@ -56,3 +56,4 @@ Route::fallback(function()
 
 Route::get('/ctrl/plain', 'ctrlController@plain');
 Route::get('/ctrl/header', 'ctrlController@header');
+Route::get('/ctrl/outJson', 'ctrlController@outJson');

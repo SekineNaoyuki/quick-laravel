@@ -22,4 +22,15 @@ class CtrlController extends Controller
             ]);
     }
 
+    public function outJson()
+    {
+        return response()
+        ->json([
+            'name' => 'Yoshihiro,YAMADA',
+            'sex' => 'male',
+            'age' => 18,
+        ])
+        ->withCallback('callback');
+    }
+
 }
