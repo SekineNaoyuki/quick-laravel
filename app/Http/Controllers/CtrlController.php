@@ -57,4 +57,11 @@ class CtrlController extends Controller
         );
     }
 
+    public function outImage()
+    {
+        return response()
+            ->file('C:/data/wings.png', ['content-type' => 'image/png' ]);
+    }
+
+
 }
