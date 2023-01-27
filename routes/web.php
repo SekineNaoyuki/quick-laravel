@@ -64,8 +64,7 @@ Route::get('/ctrl/form', 'ctrlController@form');
 Route::post('/ctrl/result', 'ctrlController@result');
 Route::get('/ctrl/upload', 'ctrlController@upload');
 Route::post('/ctrl/uploadfile', 'ctrlController@uploadfile');
-Route:: get('/ctrl/middle', 'CtrlController@middle')
-    ->middleware(LogMiddleware::class);
+Route::get('/ctrl/middle', 'CtrlController@middle');
 
 
 Route::fallback(function()
