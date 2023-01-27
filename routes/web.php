@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HelloController;
+use App\Http\Middleware\LogMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/', function () {
 Route::get('/hello', 'HelloController@index');
 Route::get('/hello/view', 'HelloController@view');
 Route::get('/hello/list', 'HelloController@list');
+
 Route::get('/view/escape', 'ViewController@escape');
 Route::get('/view/if', 'ViewController@if');
 Route::get('/view/unless', 'ViewController@unless');
@@ -35,6 +37,7 @@ Route::get('/view/style_class', 'ViewController@style_class');
 Route::get('/view/checked', 'ViewController@checked');
 Route::get('/view/master', 'ViewController@master');
 Route::get('/view/comp', 'ViewController@comp');
+
 Route::get('/route/param/{id?}', 'RouteController@param')
     ->whereNumber('id')
     ->name('param');
@@ -61,7 +64,8 @@ Route::get('/ctrl/form', 'ctrlController@form');
 Route::post('/ctrl/result', 'ctrlController@result');
 Route::get('/ctrl/upload', 'ctrlController@upload');
 Route::post('/ctrl/uploadfile', 'ctrlController@uploadfile');
-
+Route:: get('/ctrl/middle', 'CtrlController@middle')
+    ->middleware(LogMiddleware::class);
 
 
 Route::fallback(function()

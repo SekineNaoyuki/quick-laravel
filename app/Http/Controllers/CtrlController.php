@@ -102,4 +102,9 @@ class CtrlController extends Controller
 
     }
 
+    public function middle()
+    {
+        return 'log is recorded!!';
+    }
+
 }
