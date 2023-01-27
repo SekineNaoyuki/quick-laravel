@@ -68,7 +68,8 @@ Route::get('/ctrl/middle', 'CtrlController@middle');
 
 Route::get('/state/recCookie', 'stateController@recCookie');
 Route::get('/state/readCookie', 'stateController@readCookie');
-
+Route::get('/state/session1', 'stateController@session1');
+Route::get('/state/session2', 'stateController@session2');
 
 Route::fallback(function()
 {
