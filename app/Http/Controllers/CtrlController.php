@@ -79,4 +79,27 @@ class CtrlController extends Controller
         return view('ctrl.form', ['result' => 'こんにちは'.$name.'さん！']);
     }
 
+    public function upload()
+    {
+        return view('ctrl.upload', ['result' => '']);
+    }
+
+    public function uploadfile(Request $req)
+    {
+        if (!$req->hasFile('upfile')) {
+            return 'ファイル を 指定 し て ください。';
+        }
+
+        $file = $req->upfile;
+
+        if (!$file->isValid()) {
+            return 'アップ ロード に 失敗 し まし た。';
+        }
+
+        $name = $file->getClientOriginalName();
+        $file->storeAs('files', $name);
+        return view('ctrl.upload', ['result' => $name.' を アップ ロード し まし た。' ]);
+
+    }
+
 }

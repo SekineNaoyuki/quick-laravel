@@ -59,6 +59,8 @@ Route::get('/ctrl/outImage', 'ctrlController@outImage');
 Route::get('/ctrl/redirectBasic', 'ctrlController@redirectBasic');
 Route::get('/ctrl/form', 'ctrlController@form');
 Route::post('/ctrl/result', 'ctrlController@result');
+Route::get('/ctrl/upload', 'ctrlController@upload');
+Route::post('/ctrl/uploadfile', 'ctrlController@uploadfile');
 
 
 
