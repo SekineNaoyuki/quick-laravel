@@ -66,6 +66,9 @@ Route::get('/ctrl/upload', 'ctrlController@upload');
 Route::post('/ctrl/uploadfile', 'ctrlController@uploadfile');
 Route::get('/ctrl/middle', 'CtrlController@middle');
 
+Route::get('/state/recCookie', 'stateController@recCookie');
+Route::get('/state/readCookie', 'stateController@readCookie');
+
 
 Route::fallback(function()
 {
