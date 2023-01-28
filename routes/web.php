@@ -71,6 +71,9 @@ Route::get('/state/readCookie', 'stateController@readCookie');
 Route::get('/state/session1', 'stateController@session1');
 Route::get('/state/session2', 'stateController@session2');
 
+Route::get('/record/run', 'RecordController@run');
+Route::get('/record/where', 'RecordController@where');
+
 Route::fallback(function()
 {
     return view('route.error');
