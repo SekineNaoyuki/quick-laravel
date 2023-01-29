@@ -73,6 +73,7 @@ Route::get('/state/session2', 'stateController@session2');
 
 Route::get('/record/run', 'RecordController@run');
 Route::get('/record/where', 'RecordController@where');
+Route::get('/record/hasmany', 'RecordController@hasmany');
 
 Route::fallback(function()
 {
