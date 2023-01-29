@@ -14,8 +14,10 @@ class RecordController extends Controller
 
     public function where()
     {
-        $result = Book::published()->get();
-        return view('hello.list', ['records' => $result]);
+        $result = Book::groupBy('publisher')
+            ->having('price_avg', '>', 1000)
+            ->selectRaw('publisher, AVG(price) AS price_avg')->dump()->get();
+        // return view('hello.list', ['records' => $result]);
     }
 
 }
