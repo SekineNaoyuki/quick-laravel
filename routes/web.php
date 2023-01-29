@@ -75,6 +75,9 @@ Route::get('/record/run', 'RecordController@run');
 Route::get('/record/where', 'RecordController@where');
 Route::get('/record/hasmany', 'RecordController@hasmany');
 
+Route::get('/save/create', 'SaveController@create');
+Route::post('/save/store', 'SaveController@store');
+
 Route::fallback(function()
 {
     return view('route.error');
