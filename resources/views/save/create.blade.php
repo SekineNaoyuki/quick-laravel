@@ -1,6 +1,14 @@
 @extends('layouts.base')
 @section('title','書籍情報フォーム')
 @section('main')
+@if($errors->any())
+    <ul>
+        @foreach($errors->all() as $err)
+            <li class="text-danger">{{$err}}</li>
+        @endforeach
+    </ul>
+@endif
+
 <form method="POST" action="/save/store">
     @csrf
     <div class="pl-2">

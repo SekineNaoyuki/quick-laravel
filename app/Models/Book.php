@@ -10,6 +10,14 @@ class Book extends Model
     use HasFactory;
     protected $fillable = ['isbn', 'title', 'price', 'publisher', 'published'];
 
+    public static $rules = [
+        'isbn' => 'required',
+        'title' => 'required | string | max:10',
+        'price' => 'integer | min: 0',
+        'publisher' => 'required | in:走跳社, テックCode, ジャパンIT, 優丸システム, IT Emotion',
+        'published' => 'required | date'
+    ];
+
     public function scopePublished($query)
     {
         $query->where('published', '<=', now());
