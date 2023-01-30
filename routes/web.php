@@ -77,6 +77,8 @@ Route::get('/record/hasmany', 'RecordController@hasmany');
 
 Route::get('/save/create', 'SaveController@create');
 Route::post('/save/store', 'SaveController@store');
+Route::get('/save/{id}/edit', 'SaveController@edit');
+Route::patch('/save/{id}', 'SaveController@update');
 
 Route::fallback(function()
 {
